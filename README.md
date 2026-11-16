@@ -47,7 +47,23 @@ flowchart LR
 
 Требования: PHP 8.2+, Laravel 11 или 12. Тестовое окружение использует Laravel 12;
 для Laravel 11 совместимость объявлена по API, отдельный прогон пока не выполнен.
-GitHub и Packagist ещё не опубликованы; имя Composer предварительное.
+Исходники опубликованы в GitHub. В Packagist пакет пока не зарегистрирован.
+
+## Установка с GitHub
+
+После выпуска тега `v1.0.0` пакет можно устанавливать без Packagist:
+
+```bash
+composer config repositories.product-discounts vcs https://github.com/Ilia-Xorosh/laravel-product-discounts
+composer require product-discounts/laravel-product-discounts:^1.0
+php artisan vendor:publish --tag=product-discounts-config
+php artisan vendor:publish --tag=product-discounts-migrations
+php artisan migrate
+```
+
+Затем настройте каталог и права доступа, как описано ниже. Репозитории публичные;
+токен GitHub для обычного скачивания не требуется (Composer может запросить его
+при превышении лимита GitHub API).
 
 ## Установка из локальной папки
 
