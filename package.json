@@ -1,0 +1,5 @@
+{
+  "private": true,
+  "scripts": {"test": "node --test tests-js/*.test.cjs"},
+  "devDependencies": {"jsdom": "^26.0.0"}
+}

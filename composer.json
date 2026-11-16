@@ -1,0 +1,24 @@
+{
+    "name": "product-discounts/laravel-product-discounts",
+    "description": "Product promotions, price adjustments and promo codes for Laravel",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "illuminate/database": "^11.0 || ^12.0",
+        "illuminate/http": "^11.0 || ^12.0",
+        "illuminate/routing": "^11.0 || ^12.0",
+        "illuminate/support": "^11.0 || ^12.0",
+        "illuminate/validation": "^11.0 || ^12.0",
+        "illuminate/view": "^11.0 || ^12.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^10.0",
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {"psr-4": {"ProductDiscounts\\": "src/"}},
+    "autoload-dev": {"psr-4": {"ProductDiscounts\\Tests\\": "tests/"}},
+    "extra": {"laravel": {"providers": ["ProductDiscounts\\DiscountServiceProvider"]}},
+    "scripts": {"test": "phpunit"},
+    "config": {"sort-packages": true}
+}
